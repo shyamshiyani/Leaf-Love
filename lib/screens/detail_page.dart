@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-import '../utils/allProductsData.dart';
+import '../utils/allproductsdata.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -56,7 +54,7 @@ class _DetailPageState extends State<DetailPage> {
                       ? Icons.favorite
                       : Icons.favorite_border_outlined,
                   size: 25,
-                  color: Colors.grey,
+                  color: Colors.red,
                 ),
               ),
             ),
@@ -84,20 +82,27 @@ class _DetailPageState extends State<DetailPage> {
                   topLeft: Radius.circular(45), topRight: Radius.circular(45)),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                margin: const EdgeInsets.only(bottom: 495),
-                child: const SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  child: CircleAvatar(
-                    radius: 145,
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ...data['images'].map(
+                  (e) => Container(
+                    margin:
+                        const EdgeInsets.only(bottom: 495, right: 60, left: 60),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: CircleAvatar(
+                        radius: 145,
+                        backgroundImage: NetworkImage(e),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Column(
             children: [
@@ -108,15 +113,24 @@ class _DetailPageState extends State<DetailPage> {
                     margin: const EdgeInsets.only(top: 330, left: 142),
                     height: 50,
                     width: 120,
-                    decoration: const BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.all(Radius.circular(30))),
+                    decoration: ProductData.cartProductData.length == 0
+                        ? const BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                          )
+                        : const BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                          ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         GestureDetector(
                           onTap: () {
                             setState(() {
+                              (data['qty'] <= 1)
+                                  ? ProductData.cartProductData.remove(data)
+                                  : Container();
                               data['qty']--;
                             });
                           },
@@ -129,7 +143,7 @@ class _DetailPageState extends State<DetailPage> {
                         Text(
                           data['qty'] == 0
                               ? "${data['qty']}"
-                              : "${data['qty'] - 1}",
+                              : "${data['qty']}",
                           style: const TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 25,
@@ -285,6 +299,8 @@ class _DetailPageState extends State<DetailPage> {
                         setState(() {
                           ProductData.cartData.add(data);
                           ProductData.convertUniqueData();
+                          (data['qty'] == 0) ? data['qty']++ : Container();
+                          ProductData.alltotal(ProductData.isTrue = true);
                           Navigator.of(context).pushNamed('Cart_page');
                         });
                       },

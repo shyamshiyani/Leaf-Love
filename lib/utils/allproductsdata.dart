@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ProductData {
+  static num subtotal = 0;
+  static num total = 0;
+  static bool isTrue = true;
   static Set<Map<String, dynamic>> favouritedata = {};
   static List<Map<String, dynamic>> favouriteproductdata = [];
   static Set<Map<String, dynamic>> cartData = {};
@@ -13,21 +16,26 @@ class ProductData {
     favouriteproductdata = favouritedata.toList();
   }
 
-  static num totalPrice() {
-    num sum = 0;
-    for (var element in cartProductData) {
-      sum += element['price'];
+  static void totalPrice(bool yes) {
+    if (cartProductData.isEmpty) {
+      subtotal = 0;
+      total = 0;
+    } else {
+      for (var element in cartProductData) {
+        if (yes) {
+          subtotal += element['price'];
+        } else {
+          subtotal -= element['price'];
+        }
+      }
     }
     // total= sum + delivery;
-
-    return sum;
   }
 
-  static num alltotal() {
-    num total = 0;
+  static void alltotal(bool yes) {
+    ProductData.totalPrice(yes);
     num delivery = 10;
-    total = delivery + totalPrice();
-    return total;
+    total = delivery + subtotal;
   }
 
   static num delivery() {
@@ -57,14 +65,15 @@ class ProductData {
             "https://www.vegrecipesofindia.com/wp-content/uploads/2019/12/avocado-salad.jpg",
           ],
           'ingidiance': [
-            "🌶️",
+            "🌶",
             "🥑",
             "🧄",
             "🍏",
             "🥬",
             "🥦",
           ],
-          'qty': 1,
+          'qty': 0,
+          'total': 1,
         },
         {
           'id': 2,
@@ -92,7 +101,8 @@ class ProductData {
             "🍑",
             "🍌",
           ],
-          'qty': 1,
+          'qty': 0,
+          'total': 1,
         },
       ],
     },
@@ -122,7 +132,8 @@ class ProductData {
             "🧂",
             "🧄",
           ],
-          'qty': 1,
+          'qty': 0,
+          'total': 1,
         },
         {
           'id': 2,
@@ -148,7 +159,8 @@ class ProductData {
             "🧄",
             "🥦",
           ],
-          'qty': 1,
+          'qty': 0,
+          'total': 1,
         },
       ]
     },
@@ -176,9 +188,10 @@ class ProductData {
             "🍏",
             "🥬",
             "🥑",
-            "🌶️",
+            "🌶",
           ],
-          'qty': 1,
+          'qty': 0,
+          'total': 1,
         },
         {
           'id': 2,
@@ -199,11 +212,12 @@ class ProductData {
           'ingidiance': [
             "🥬",
             "🥦",
-            "🌶️",
+            "🌶",
             "🧄",
             "🍋",
           ],
-          'qty': 1,
+          'qty': 0,
+          'total': 1,
         },
       ]
     },
@@ -227,14 +241,15 @@ class ProductData {
             "https://hips.hearstapps.com/hmg-prod/images/281/veggie-cobb-salad-1522250864.jpg"
           ],
           'ingidiance': [
-            "🌶️",
+            "🌶",
             "🌾",
             "🍋",
             "🥬",
             "🥦",
             "🥑",
           ],
-          'qty': 1,
+          'qty': 0,
+          'total': 1,
         },
         {
           'id': 2,
@@ -249,14 +264,15 @@ class ProductData {
               "https://choosingchia.com/jessh-jessh/uploads/2021/06/Thai-Crunch-Salad-2-680x1020.jpg",
           'images': ["", "", ""],
           'ingidiance': [
-            "🌶️",
+            "🌶",
             "🥑",
             "🧄",
             "🍏",
             "🥬",
             "🥦",
           ],
-          'qty': 1,
+          'qty': 0,
+          'total': 1,
         },
       ]
     },
@@ -282,7 +298,8 @@ class ProductData {
             "🐔",
             "🥚",
           ],
-          'qty': 1,
+          'qty': 0,
+          'total': 1,
         },
         {
           'id': 2,
@@ -304,7 +321,8 @@ class ProductData {
             "🥬",
             "🥦",
           ],
-          'qty': 1,
+          'qty': 0,
+          'total': 1,
         },
       ]
     }

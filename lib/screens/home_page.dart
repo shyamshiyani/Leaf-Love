@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/allProductsData.dart';
+import '../utils/allproductsdata.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -54,7 +54,7 @@ class _HomepageState extends State<Homepage> {
                                   Navigator.of(context).pushNamed('Cart_page');
                                 },
                                 child: const Icon(
-                                  Icons.sort,
+                                  Icons.shopping_cart,
                                   size: 39,
                                 ),
                               ),
@@ -398,6 +398,12 @@ class _HomepageState extends State<Homepage> {
                                                             .add(e);
                                                         ProductData
                                                             .convertUniqueData();
+                                                        (e['qty'] == 0)
+                                                            ? e['qty']++
+                                                            : Container();
+                                                        ProductData.alltotal(
+                                                            ProductData.isTrue =
+                                                                true);
                                                       });
                                                     },
                                                     child: Icon(
