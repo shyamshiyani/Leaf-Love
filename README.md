@@ -56,13 +56,20 @@ Nutritional Information: Provide nutritional details for each salad item to help
 Leaf-Love is a feature-rich Flutter app designed to streamline the salad ordering process for users. With its intuitive interface and comprehensive functionalities, it offers a delightful user experience for salad enthusiasts. As the app continues to evolve, it aims to incorporate additional features to enhance user engagement and satisfaction.
 
 
-https://github.com/shyamshiyani/Leaf-Love/assets/149999914/00639666-7756-4097-b40a-f4435b71510b
+
+https://github.com/shyamshiyani/Leaf-Love/assets/149999914/680a6ac0-b98e-4b6a-8d0e-69087fe2a8a1
+
+
 
 ![1](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/766cea25-2bc3-4622-be93-b0e5543e5743)
 ![2](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/9238506c-7091-43e1-90a9-ab2a3170d9ea)
 ![3](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/33f220c4-b066-452e-bf7f-ee8464fd43a3)
+![7](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/1d31a0a4-e4a9-4d1b-aac5-8b19bc4759c9)
+![8](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/973becf7-57f5-4238-8d49-10e4848ea59b)
 ![4](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/51f16f25-ac79-4cc0-b928-e7acd5b111bd)
 ![5](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/c15bd7b3-4984-4aba-aa6c-d96411316775)
 ![6](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/683c8ea8-e408-4e95-b8e4-1d65e3717060)
-![7](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/1d31a0a4-e4a9-4d1b-aac5-8b19bc4759c9)
-![8](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/973becf7-57f5-4238-8d49-10e4848ea59b)
+![Screenshot_20240425_023711](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/6d673397-e0a5-485c-b9d0-5461ef5a3d39)
+![Screenshot_20240425_024708](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/1c5e4cd1-430c-4127-baa7-0e5c8a093e07)
+
+
