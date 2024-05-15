@@ -70,6 +70,4 @@ https://github.com/shyamshiyani/Leaf-Love/assets/149999914/680a6ac0-b98e-4b6a-8d
 ![5](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/c15bd7b3-4984-4aba-aa6c-d96411316775)
 ![6](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/683c8ea8-e408-4e95-b8e4-1d65e3717060)
 ![Screenshot_20240425_023711](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/6d673397-e0a5-485c-b9d0-5461ef5a3d39)
-![Screenshot_20240425_024708](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/1c5e4cd1-430c-4127-baa7-0e5c8a093e07)
-
-
+![Screenshot_20240515_112409](https://github.com/shyamshiyani/Leaf-Love/assets/149999914/584d3268-2ef0-4a8f-938e-b430d8d04525)
